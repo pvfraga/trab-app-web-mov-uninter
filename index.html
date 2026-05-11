@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Profissional | Paulo Victor Fraga Coelho</title>
+    <!-- Arquivo de estilos principal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- O atributo data-theme controla o tema claro/escuro via CSS e JavaScript -->
+<body data-theme="dark">
+
+    <!-- CABEÇALHO FIXO: permanece visível durante a rolagem da página -->
+    <header>
+        <!-- Botão para alternar entre tema claro e escuro -->
+        <div class="theme-switch-container">
+            <button id="theme-toggle" title="Trocar entre Modo Claro e Escuro">
+                <span id="theme-icon">☀️</span>
+            </button>
+        </div>
+        <!-- Menu de navegação com âncoras para cada seção da página -->
+        <nav id="menu">
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- SEÇÃO 1: SOBRE MIM -->
+        <section id="sobre" class="container">
+            <!-- Cabeçalho do perfil com foto e nome -->
+            <div class="perfil-header">
+                <img src="foto.png" alt="Foto de Paulo Victor" class="foto-perfil">
+                <!-- O texto deste h1 é animado via JavaScript (efeito de digitação) -->
+                <h1>Paulo Victor Pereira Fraga Coelho</h1>
+            </div>
+            <p><strong>RU: 5417470</strong></p>
+            <hr>
+
+            <h2>Minha Trajetória</h2>
+            <p>Pai, filho, marido, empreendedor e eterno aprendiz. Minha missão é unir tecnologia e resultados reais para transformar negócios.</p>
+
+            <p>Minha jornada técnica começou aos 15 anos no Cotemig, em Belo Horizonte. Entre linhas de código e circuitos, consolidei uma base sólida em informática que hoje é o meu maior diferencial. Embora tenha explorado áreas como Engenharia Agrícola na UFPel e Gastronomia no Senac MG, a tecnologia sempre foi o elo fundamental de tudo o que construí.</p>
+
+            <p><strong>O Ponto de Virada:</strong> A transição definitiva para o marketing e tecnologia veio pela resiliência. Durante a pandemia, atuando no setor de eventos, vi o mercado parar. Precisei reembolsar cada cliente dos eventos contratados. Foi nessa crise que decidi unir minha base técnica ao universo do Growth Engineering.</p>
+
+            <p>Aos 28 anos, mergulhei em Filosofia e Economia para entender o mercado e hoje curso Engenharia de Software na Uninter para elevar o nível das automações que entrego.</p>
+
+            <p><strong>Hobbies:</strong> Tocar baixo, ouvir rock e estudar táticas de xadrez.</p>
+        </section>
+
+        <!-- SEÇÃO 2: FORMAÇÃO ACADÊMICA -->
+        <section id="formacao" class="container">
+            <h2>Formação Acadêmica</h2>
+
+            <!-- Cada div.formacao-item representa um curso ou instituição -->
+            <div class="formacao-item">
+                <h3>Engenharia de Software (Bacharelado)</h3>
+                <p><strong>Centro Universitário Internacional UNINTER</strong> | 2025 - 2029</p>
+                <p>Foco em desenvolvimento de sistemas, arquitetura de software e soluções escaláveis.</p>
+            </div>
+            <div class="formacao-item">
+                <h3>Tecnólogo em Gastronomia</h3>
+                <p><strong>SENAC MG - Belo Horizonte</strong> | Concluído em 2021</p>
+            </div>
+            <div class="formacao-item">
+                <h3>Especializações em Growth e Marketing</h3>
+                <p>Estudos avançados em Growth Engineering, Economia e estruturação digital de negócios através de plataformas como edX.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: PORTFÓLIO -->
+        <section id="portfolio" class="container">
+            <h2>Portfólio e Projetos</h2>
+
+            <!-- Cada div.projeto é um card de projeto com link externo -->
+            <div class="projeto">
+                <h3>PV Fraga</h3>
+                <p>Minha plataforma de consultoria onde aplico estratégias de Growth e tecnologia para acelerar negócios.</p>
+                <a href="https://www.pvfraga.com" target="_blank">Visitar Projeto</a>
+            </div>
+
+            <div class="projeto">
+                <h3>Emperor Mgmt</h3>
+                <p>Sistema focado na gestão de propriedades e aluguéis de curta temporada, otimizando processos operacionais.</p>
+                <a href="https://emperormgmt.com" target="_blank">Visitar Projeto</a>
+            </div>
+
+            <div class="projeto">
+                <h3>Só Cachos</h3>
+                <p>Case de sucesso em transição digital completa, envolvendo gestão estratégica de anúncios e presença online.</p>
+                <a href="https://socachos.com.vc" target="_blank">Visitar Projeto</a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 4: CONTATO -->
+        <section id="contato" class="container">
+            <h2>Conecte-se Comigo</h2>
+
+            <!-- Links diretos para redes sociais e e-mail profissional -->
+            <div class="lista-contatos">
+                <p><strong>Email Profissional:</strong> <a href="mailto:pvfraga@pvfraga.com">pvfraga@pvfraga.com</a></p>
+                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/pvfraga_growth90" target="_blank">@pvfraga_growth90</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/victorfragacoelho/" target="_blank">victorfragacoelho</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/pvfraga" target="_blank">github.com/pvfraga</a></p>
+            </div>
+
+            <!-- Formulário de contato: validação e envio simulado são feitos em script.js -->
+            <form id="form-contato">
+                <h3>Envie uma Mensagem</h3>
+
+                <!-- Campo Nome -->
+                <div class="campo-form">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
+                </div>
+
+                <!-- Campo E-mail: validado via regex no JavaScript -->
+                <div class="campo-form">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com">
+                </div>
+
+                <!-- Campo Mensagem -->
+                <div class="campo-form">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+                </div>
+
+                <!-- Botão de envio: a ação é interceptada pelo JavaScript -->
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+
+                <!-- Área onde o feedback de sucesso ou erro é exibido pelo JavaScript -->
+                <p id="feedback-form"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>© 2024 - Paulo Victor Fraga Coelho | Aluno de Engenharia de Software UNINTER</p>
+        <p>Desenvolvido para a Disciplina de Fundamentos da Programação Web.</p>
+    </footer>
+
+    <!-- Script carregado no final para garantir que o DOM já foi renderizado -->
+    <script src="script.js"></script>
+</body>
+</html>

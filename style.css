@@ -1,0 +1,245 @@
+/* 1. VARIÁVEIS DE CORES */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --card-bg: #f4f4f4;
+    --primary-blue: #007bff;
+    --primary-green: #00d1b2;
+    --border-color: #ddd;
+    /* Variáveis para os efeitos de brilho (glow) */
+    --glow-blue: rgba(0, 123, 255, 0.5);
+    --glow-green: rgba(0, 209, 178, 0.5);
+}
+
+/* 2. CONFIGURAÇÃO MODO ESCURO */
+[data-theme="dark"] {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --card-bg: #111111;
+    --border-color: #333;
+    --glow-blue: rgba(0, 123, 255, 0.8);
+    --glow-green: rgba(0, 209, 178, 0.8);
+}
+
+/* 3. ESTILOS GERAIS */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 4. CABEÇALHO E MENU */
+header {
+    background-color: var(--card-bg);
+    border-bottom: 2px solid var(--primary-blue);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.theme-switch-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+}
+
+#theme-toggle {
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 2px solid var(--primary-blue);
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Efeito de brilho no botão de tema */
+#theme-toggle:hover {
+    box-shadow: 0 0 15px var(--glow-blue);
+    transform: scale(1.05);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-green);
+    text-shadow: 0 0 8px var(--glow-green);
+}
+
+/* 5. CONTEÚDO PRINCIPAL */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 40px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.perfil-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-green);
+    transition: 0.4s ease;
+    object-fit: cover;
+}
+
+/* Efeito Glow na Foto */
+.foto-perfil:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 25px var(--glow-green);
+}
+
+h1, h2, h3 { 
+    color: var(--primary-blue); 
+    transition: 0.3s;
+}
+
+h2:hover {
+    text-shadow: 0 0 10px var(--glow-blue);
+}
+
+/* 6. CARDS DE PROJETOS E LINKS */
+.projeto {
+    background-color: var(--card-bg);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-green);
+    transition: 0.3s ease;
+}
+
+/* Efeito Glow e Movimento no Projeto */
+.projeto:hover {
+    transform: translateX(10px);
+    box-shadow: 0 0 20px var(--glow-green);
+    background-color: var(--bg-color); /* Leve destaque no fundo */
+}
+
+.projeto a, .lista-contatos a {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.projeto a:hover {
+    color: var(--primary-blue);
+    text-decoration: underline;
+}
+
+/* 7. FORMULÁRIO DE CONTATO */
+#form-contato {
+    margin-top: 30px;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-blue);
+}
+
+#form-contato h3 {
+    margin-top: 0;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.campo-form label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: var(--text-color);
+}
+
+.campo-form input,
+.campo-form textarea {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 2px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 8px var(--glow-blue);
+}
+
+.btn-enviar {
+    cursor: pointer;
+    padding: 12px 28px;
+    border-radius: 20px;
+    border: 2px solid var(--primary-blue);
+    background-color: var(--primary-blue);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: transparent;
+    color: var(--primary-blue);
+    box-shadow: 0 0 15px var(--glow-blue);
+}
+
+/* Mensagem de feedback exibida após tentativa de envio */
+#feedback-form {
+    margin-top: 14px;
+    font-weight: bold;
+    min-height: 24px;
+}
+
+#feedback-form.sucesso {
+    color: var(--primary-green);
+}
+
+#feedback-form.erro {
+    color: #ff4d4d;
+}
+
+/* 8. RODAPÉ */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--card-bg);
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* 9. RESPONSIVIDADE */
+@media (max-width: 600px) {
+    .perfil-header { flex-direction: column; text-align: center; }
+    nav ul { flex-direction: column; align-items: center; gap: 10px; }
+}
