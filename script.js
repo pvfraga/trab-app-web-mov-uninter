@@ -1,9 +1,7 @@
-// Aguarda o carregamento completo do DOM antes de executar qualquer script
+// Aguarda o carregamento completo antes de executar qualquer script
 document.addEventListener('DOMContentLoaded', () => {
 
-    // =============================================
     // 1. ALTERNÂNCIA DE TEMA CLARO / ESCURO
-    // =============================================
     const btn = document.getElementById('theme-toggle');
     const icon = document.getElementById('theme-icon');
     const body = document.body;
@@ -22,9 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // =============================================
-    // 2. EFEITO DE DIGITAÇÃO NO TÍTULO (h1)
-    // =============================================
+    // 2. EFEITO DE DIGITAÇÃO NO TÍTULO
     const h1 = document.querySelector('h1');
     const txt = h1.innerText; // Salva o texto original
     h1.innerText = '';        // Limpa o h1 para simular a digitação
@@ -40,9 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     type();
 
-    // =============================================
     // 3. VALIDAÇÃO E SIMULAÇÃO DE ENVIO DO FORMULÁRIO
-    // =============================================
     const form = document.getElementById('form-contato');
     const feedback = document.getElementById('feedback-form');
 
